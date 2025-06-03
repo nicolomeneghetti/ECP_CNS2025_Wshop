@@ -1,11 +1,806 @@
-<!-- index.html -->
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
-<head>
-  <title>My GitHub Website</title>
-</head>
-<body>
-  <h1>Hello, World!</h1>
-  <p>This is my GitHub Pages website.</p>
-</body>
+	<!-- 	This is the "Head" of the HTML document.
+		It contains information that isn't displayed on the actual page, but is useful
+		for the web browser when loading the page
+	-->
+	<head>
+		<!-- This is the title of the page. It is the text that appears inside this pages tab in your web browser -->
+		<title>Modeling ECP CNS Workshop</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!-- 	This links to this page's CSS, which is contained in the folder assets/css and the file main.css.
+			 If you want to edit the styling of this page, you should edit the file assets/css/main.css
+			 If you have a new CSS file you'd like to add with custom styling, you should link to it here using:
+			 <link rel="stylesheet" href="assets/css/my-new-css-file.css"/>
+		-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!-- 	In the case that the user's browser does not support JavaScript (unlikely, but possible), the page
+			will load a separate set of CSS stylings from the file assets/css/noscript.css
+			Any HTML contained inside <noscript></noscript> tags will be loaded in the event that JavaScript is not
+			available.
+		-->
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<!-- The body is the location where your site's content will go -->
+	<body class="is-preload">
+
+			<!-- This "div" wraps around all of our content and just changes how things are layed out -->
+			<div id="wrapper">
+
+					<!-- This is where the content that appears on page load exists -->
+					<header id="header">
+						<!-- This is the main content of the front page -->
+						<div class="content">
+							<div class="inner">
+								<!-- Here is a heading where you can put your name -->
+								<h1 style="font-size: 2.5em; margin-bottom: 0.3em;">Modeling extracellular potentials:</h1>
+								<h2 style="font-size: 1.5em; margin-top: 0;">principles, methods, and applications</h2>
+
+								<p>
+									A workshop in the Organization for Computational Neuroscience Society Conference
+									<br>
+									<span style="font-size: 1.2em; display: inline-block; margin-top: 0.5em;">
+										09 July 2025, 9:00–17:30 (CEST), Room 5, Florence, Italy
+									</span>
+								</p>
+
+
+
+								<p>
+									Simulating large-scale neural activity is essential for understanding brain dynamics and linking in silico models to experimentally measurable signals like LFP, EEG, and MEG. These simulations, ranging from detailed biophysical models to simplified proxies, bridge microscale neural dynamics with meso- and macro-scale recordings, offering powerful tools to interpret data, refine analyses, and explore brain function.
+									Recent advances have demonstrated the clinical and theoretical value of such models, shedding light on oscillations, excitation-inhibition balance, and biomarkers of neurological disorders like epilepsy, Alzheimer's, and Parkinson’s disease.
+									This workshop will cover the latest methodologies, hybrid modeling approaches, and applications of brain signal simulations.
+									<br>By gathering experts across disciplines, it aims to foster collaboration and advance our understanding of brain function and dysfunction.
+								</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+								<div id="time-table" style="margin-top: 3em;">
+								  <table style="margin: 0 auto; font-size: 1.1em; width: 80%; border-collapse: separate; border-spacing: 0 10px;">
+
+								    <tr>
+								      <td style="text-align: center; vertical-align: middle;">09:00 – 09:15</td>
+											<td style="text-align: center; vertical-align: middle;"> </td>
+								      <td colspan="2" style="text-align: center; vertical-align: middle;">Introduction</td>
+								    </tr>
+
+								    <tr>
+								      <td style="text-align: center; vertical-align: middle;">09:15 – 09:50</td>
+								      <td style="text-align: center; vertical-align: middle;">Mr. Dominik Peter Koller</td>
+								      <td style="text-align: center; vertical-align: middle;"><a href="#traveling_waves">How structural connectivity directs cortical traveling waves and shapes frequency gradients</a></td>
+								    </tr>
+
+								    <tr>
+								      <td style="text-align: center; vertical-align: middle;">09:50 – 10:25</td>
+								      <td style="text-align: center; vertical-align: middle;">Prof. Gaute Einevoll</td>
+								      <td style="text-align: center; vertical-align: middle;"><a href="#modeling_electric_brain_signals">Modeling electric brain signals and stimulation</a></td>
+								    </tr>
+
+										<tr>
+										  <td style="text-align: center; vertical-align: middle;">10:30 – 11:00</td>
+											<td style="text-align: center; vertical-align: middle;"> </td>
+										  <td colspan="2" style="text-align: center; vertical-align: middle;">Coffee Break</td>
+										</tr>
+
+								    <tr>
+								      <td style="text-align: center; vertical-align: middle;">11:00 – 11:35</td>
+								      <td style="text-align: center; vertical-align: middle;">Dr. Johanna Senk</td>
+								      <td style="text-align: center; vertical-align: middle;"><a href="#large_scale_modeling">Large-scale modeling of mesoscopic networks at single-neuron resolution</a></td>
+								    </tr>
+
+								    <tr>
+								      <td style="text-align: center; vertical-align: middle;">11:35 – 12:10</td>
+								      <td style="text-align: center; vertical-align: middle;">Dr. Pablo Martínez Cañada</td>
+								      <td style="text-align: center; vertical-align: middle;"><a href="#inverse_modeling_LFP">Inverse Modelling of Field Potentials from Simulations of Spiking Network Models: Applications in Neuroscience Research and Clinical Settings</a></td>
+								    </tr>
+
+								    <tr>
+								      <td style="text-align: center; vertical-align: middle;">12:10 – 12:40</td>
+								      <td style="text-align: center; vertical-align: middle;">Dr. Nicolò Meneghetti</td>
+								      <td id="kernels_table" style="text-align: center; vertical-align: middle;"><a href="#kernels">From microcircuits to mesoscopic signals: a kernel approach to efficient and interpretable LFP estimation</a></td>
+								    </tr>
+
+										<tr>
+											<td style="width: 15%; text-align: center; vertical-align: middle; white-space: nowrap;">12:40 – 14:00</td>
+											<td style="text-align: center; vertical-align: middle;"> </td>
+										  <td colspan="2" style="text-align: center; vertical-align: middle;">Lunch Break</td>
+										</tr>
+
+								    <tr>
+								      <td style="text-align: center; vertical-align: middle;">14:15 – 14:50</td>
+								      <td style="text-align: center; vertical-align: middle;">Prof. Emily Patricia Stephen</td>
+								      <td style="text-align: center; vertical-align: middle;"><a href="#connecting_biophysical_models">Connecting biophysical models to empirical power spectra using Filtered Point Processes</a></td>
+								    </tr>
+
+								    <tr>
+								      <td style="text-align: center; vertical-align: middle;">14:50 – 15:25</td>
+								      <td style="text-align: center; vertical-align: middle;">Prof. Madeleine M. Lowery</td>
+								      <td style="text-align: center; vertical-align: middle;"><a href="#aDBS">Modelling Neural Activity During Adaptive Deep Brain Stimulation for Parkinson’s Disease</a></td>
+								    </tr>
+
+										<tr>
+										  <td style="text-align: center; vertical-align: middle;">15:30 – 16:00</td>
+											<td style="text-align: center; vertical-align: middle;"> </td>
+										  <td colspan="2" style="text-align: center; vertical-align: middle;">Coffee Break</td>
+										</tr>
+
+								    <tr>
+								      <td style="text-align: center; vertical-align: middle;">16:00 – 16:35</td>
+								      <td style="text-align: center; vertical-align: middle;">Dr. Meysam Hashemi</td>
+								      <td style="text-align: center; vertical-align: middle;"><a href="#VBT">Principles and Operation of Virtual Brain Twins</a></td>
+								    </tr>
+
+								    <tr>
+								      <td style="text-align: center; vertical-align: middle;">16:35 – 17:10</td>
+								      <td style="text-align: center; vertical-align: middle;">Dr. Katharina Duecker</td>
+								      <td style="text-align: center; vertical-align: middle;"><a href="#HCN">The Human Neocortical Neurosolver as an interactive modeling tool to study the multi-scale mechanisms of human EEG/MEG signals</a></td>
+								    </tr>
+								  </table>
+								</div>
+
+
+								<!-- 	Here is an image where you can put a picture of you.
+									You can change the width and height attributes below to change how large
+									your image is.
+
+									Try adding "border-radius: 50%;" to the style attribute.
+								-->
+								<!-- 	Here is a paragraph where you can put your position and institution, or
+									a short line about yourself.
+								-->
+
+
+								<!--
+								<p>
+									Position <br> Institution
+								</p>
+								<p>
+									<a href="images/Astronomy.jpg" target="_blank">Curriculum Vitae</a>
+								</p>
+				        -->
+
+
+
+								<section id="traveling_waves" style="display: flex; align-items: flex-start; gap: 20px; margin: 80px 0; border-bottom: 1px solid white">
+								  <!-- Colonna di sinistra: Foto + Link -->
+								  <div style="display: flex; flex-direction: column; align-items: center;">
+								    <img src="images/Dominik Peter Koller/DK.JPG" alt="Speaker Photo" style="width: 200px; height: auto; border-radius: 8px; object-fit: cover;">
+
+								    <!-- Link sotto l'immagine -->
+								    <div style="margin-top: 10px; text-align: center;">
+								      <p style="margin: 5px 0;">
+								        <a href="mailto:dominik.koller@bih-charite.de">Email the Speaker</a>
+								      </p>
+											<!--<p style=" border-bottom: 1px dotted; cursor: pointer;">
+									      example AT prova.com
+									    </p> -->
+								      <p style="margin: 5px 0;">
+								        <a href="https://scholar.google.com/citations?user=skNLEIwAAAAJ&hl=en" target="_blank">Google Scholar</a>
+								      </p>
+								    </div>
+								  </div>
+
+
+								  <!-- Colonna di destra: Testo -->
+								  <div>
+										<p style="margin-bottom: 5px; font-size: 28px; font-weight: bold">9:15 - 09:50</p>
+								    <h2>How structural connectivity directs cortical traveling waves and shapes frequency gradients</h2>
+
+										<h3 style="margin-bottom: 4px; font-size: 20px">Mr. Dominik Peter Koller</h3>
+										<p style="margin-top: 0;">Brain Simulation Section, Berlin Institute of Health at Charité – Universitätsmedizin Berlin</p>
+
+
+										<h3 style="margin-bottom: 4px;">Abstract</h3>
+										<p style="margin-top: 0;">Waves of neural activity propagate throughout the cortex across different spectral and spatial scales. Their proposed functions range from perception modulation and memory processing to motor planning. While cortical traveling waves follow specific directions, the mechanisms directing them remain unclear. Some studies suggest a connection between cortical traveling wave directions and frequency gradients but their precise relationship is unknown. We hypothesize that structural connection strength gradients influence both cortical wave direction and frequency gradients. Our analysis reveals that the human connectome exhibits large-scale connection strength gradients. In cortical network models informed by this connectome, traveling waves emerge naturally and propagate from regions of weaker to stronger connectivity. Simultaneously, cortical frequency gradients are generated and align with these structural gradients in our simulations. We fitted our model to MEG resting-state functional connectivity data and found that the best-fitting models generate directed traveling waves and frequency gradients, supporting the role of structural connectivity in shaping cortical dynamics.</p>
+
+										<p>
+  										<a href="#time-table" style="color: white; text-decoration: none; display: inline-flex; align-items: baseline; gap: 6px;">
+    									<span style="font-size: 18px; position: relative; top: -1.5px;">↑</span>
+    										Back to the Workshop timetable
+											<span style="font-size: 18px; position: relative; top: -1.5px;">↑</span>
+  										</a>
+										</p>
+								  </div>
+								</section>
+								<!-- Button to return to timetable -->
+
+
+
+
+								<section id="modeling_electric_brain_signals" style="display: flex; align-items: flex-start; gap: 20px; margin: 80px 0; border-bottom: 1px solid white">
+									<!-- Colonna di sinistra: Foto + Link -->
+									<div style="display: flex; flex-direction: column; align-items: center;">
+										<img src="images/gaute einevoll/GauteEinevoll-3X.JPG" alt="Speaker Photo" style="width: 200px; height: auto; border-radius: 8px; object-fit: cover;">
+
+										<!-- Link sotto l'immagine -->
+										<div style="margin-top: 10px; text-align: center;">
+											<p style="margin: 5px 0;">
+												<a href="mailto:gaute.einevoll@nmbu.no">Email the Speaker</a>
+											</p>
+											<p style="margin: 5px 0;">
+												<a href="https://scholar.google.no/citations?hl=en&user=np0Lz5kAAAAJ&view_op=list_works" target="_blank">Google Scholar</a>
+											</p>
+										</div>
+									</div>
+
+									<!-- Colonna di destra: Testo -->
+									<div>
+										<p style="margin-bottom: 5px; font-size: 28px; font-weight: bold">9:50 - 10:25</p>
+										<h2>Modeling electric brain signals and stimulation</h2>
+
+										<h3 style="margin-bottom: 4px; font-size: 20px">Prof. Gaute Einevoll</h3>
+										<p style="margin-top: 0;">Norwegian University of Life Sciences & University of Oslo</p>
+
+
+										<h3 style="margin-bottom: 4px;">Abstract</h3>
+										<p style="margin-top: 0;">The combined use of volume-conductor theory and compartmental modeling of neuronal dynamics allows for biophysical computation of extracellular electric potentials such as extracellular spikes, multiunit activity (MUA), local field potentials (LFP), ECoG and EEG signals, as well as magnetic signals such as MEG <a href="https://www.cambridge.org/core/books/electric-brain-signals/900A8A211004B98FF3E196600D4C6DF4" target="_blank">(Halnes et al, Electric Brain Signals, Cambridge University Press, 2024)</a>.
+										In the presentation this computational scheme will be presented together with example results from its use in computing brain signals generated by neurons and neuronal populations.
+										The use of the same scheme, aided by the Reciprocity Theorem, to simulate effects of electric stimulation of neurons, will also be presented.</p>
+
+										<p>
+  										<a href="#time-table" style="color: white; text-decoration: none; display: inline-flex; align-items: baseline; gap: 6px;">
+    									<span style="font-size: 18px; position: relative; top: -1.5px;">↑</span>
+    										Back to the Workshop timetable
+											<span style="font-size: 18px; position: relative; top: -1.5px;">↑</span>
+  										</a>
+										</p>
+									</div>
+								</section>
+
+
+
+
+								<section id="large_scale_modeling" style="display: flex; align-items: flex-start; gap: 20px; margin: 80px 0; border-bottom: 1px solid white">
+									<!-- Colonna di sinistra: Foto + Link -->
+									<div style="display: flex; flex-direction: column; align-items: center;">
+										<img src="images/johanna senk/Johanna_Senk_square.jpg" alt="Speaker Photo" style="width: 200px; height: auto; border-radius: 8px; object-fit: cover;">
+
+										<!-- Link sotto l'immagine -->
+										<div style="margin-top: 10px; text-align: center;">
+											<p style="margin: 5px 0;">
+												<a href="mailto:j.senk@fz-juelich.de">Email the Speaker</a>
+											</p>
+											<p style="margin: 5px 0;">
+												<a href="https://profiles.sussex.ac.uk/p589762-johanna-senk" target="_blank">Personal Website </a>
+												<br>
+												<a href="https://www.fz-juelich.de/en/ias/ias-6/forschung/computational-neurophysics/team-future-simulation-architectures" target="_blank">Team Website </a>
+											</p>
+										</div>
+									</div>
+
+									<!-- Colonna di destra: Testo -->
+									<div>
+										<p style="margin-bottom: 5px; font-size: 28px; font-weight: bold">11:00 - 11:35</p>
+										<h2>Large-scale modeling of mesoscopic networks at single-neuron resolution</h2>
+
+										<h3 style="margin-bottom: 4px;font-size: 20px">Dr. Johanna Senk</h3>
+										<p style="margin-top: 0;">Sussex AI, School of Engineering and Informatics, University of Sussex, Brighton, United Kingdom & Institute for Advanced Simulation (IAS-6), Jülich Research Centre, Jülich, Germany</p>
+
+
+										<h3 style="margin-bottom: 4px;">Abstract</h3>
+										<p style="margin-top: 0;">
+											We develop and investigate spatially structured multi-layer point-neuron network models of about 3.2 million neurons and 7.7 billion synapses <a href="https://doi.org/10.1093/cercor/bhae405" target="_blank">(Senk et al., Cerebral Cortex, 2024)</a>, covering 4x4 mm² of cortical surface at a realistic density of neurons and connections. From the simulated spiking activity, we compute biophysics-based predictions of local field potentials. The modeling framework enables a direct comparison between simulation results and extracellular recordings obtained with multi-electrode arrays.
+											<br>
+										</p>
+
+										<p>
+  										<a href="#time-table" style="color: white; text-decoration: none; display: inline-flex; align-items: baseline; gap: 6px;">
+    									<span style="font-size: 18px; position: relative; top: -1.5px;">↑</span>
+    										Back to the Workshop timetable
+											<span style="font-size: 18px; position: relative; top: -1.5px;">↑</span>
+  										</a>
+										</p>
+									</div>
+								</section>
+
+
+
+
+								<section id="inverse_modeling_LFP" style="display: flex; align-items: flex-start; gap: 20px; margin: 80px 0; border-bottom: 1px solid white">
+									<!-- Colonna di sinistra: Foto + Link -->
+									<div style="display: flex; flex-direction: column; align-items: center;">
+										<img src="images/pablo martinez canada/profile_pic.png" alt="Speaker Photo" style="width: 200px; height: auto; border-radius: 8px; object-fit: cover;">
+
+										<!-- Link sotto l'immagine -->
+										<div style="margin-top: 10px; text-align: center;">
+											<p style="margin: 5px 0;">
+												<a href="mailto:pablomc@ugr.es">Email the Speaker</a>
+											</p>
+											<p style="margin: 5px 0;">
+												<a href="https://www.ugr.es/~pablomc/" target="_blank">Personal Website</a>
+												<br>
+												<a href="https://icarproyectos.ugr.es/msbrainmarker-hpeecbrainmod/index.html" target="_blank">Current projects</a>
+												<br>
+												<a href="https://scholar.google.es/citations?user=FNb-uCQAAAAJ&hl=es&oi=ao" target="_blank">Google Scholar</a>
+											</p>
+										</div>
+									</div>
+
+
+									<!-- Colonna di destra: Testo -->
+									<div>
+										<p style="margin-bottom: 5px; font-size: 28px; font-weight: bold">11:35 - 12:10</p>
+										<h2>Inverse Modelling of Field Potentials from Simulations of Spiking Network Models: Applications in Neuroscience Research and Clinical Settings</h2>
+
+										<h3 style="margin-bottom: 4px;font-size: 20px">Dr. Pablo Martínez Cañada</h3>
+										<p style="margin-top: 0;">Research Centre for Information and Communications Technologies (CITIC), University of Granada, Granada, Spain<br>Department of Computer Engineering, Automation and Robotics, University of Granada, Granada, Spain</p>
+
+										<h3 style="margin-bottom: 4px;">Abstract</h3>
+										<p style="margin-top: 0;">
+											Network models composed of leaky integrate-and-fire (LIF) spiking neurons have been employed to address fundamental questions about neural dynamics, cortical oscillations, sensory processing, working memory, and behaviour. A key drawback of LIF neuron models is their representation as a single compartment, which prevents them from capturing the spatial distribution of transmembrane currents necessary for generating extracellular potentials. However, recent advancements have enabled an accurate biophysical approximation of extracellular signals by leveraging variables directly measured from LIF network simulations. By incorporating appropriate forward head models, LIF network models can generate realistic representations of large-scale field potentials, such as electroencephalogram (EEG) and magnetoencephalography (MEG) signals, paving the way for their application in clinical settings. Despite these advancements, our understanding of the precise mechanistic relationship between field potential recordings and key aspects of neural activity remains incomplete. In particular, it remains unclear which specific features of electrophysiological population activity (i.e., putative biomarkers) best reflect properties of the underlying microcircuit configuration. To aid this effort, our lab has developed inverse models that combine LIF network simulations, realistic extracellular signal computation, and machine learning techniques to automatically infer the most probable cortical circuit configuration that matches field potential features. Our tools serve as a benchmarking resource for model-driven interpretation of electrophysiological data and for evaluating candidate field potential biomarkers that may reflect changes in neural circuit parameters. Using mouse LFP data and human EEG recordings, we demonstrate the potential of our approach to uncover imbalances in neural circuit parameters during brain development and in Alzheimer's disease.
+										</p>
+
+										<p>
+  										<a href="#time-table" style="color: white; text-decoration: none; display: inline-flex; align-items: baseline; gap: 6px;">
+    									<span style="font-size: 18px; position: relative; top: -1.5px;">↑</span>
+    										Back to the Workshop timetable
+											<span style="font-size: 18px; position: relative; top: -1.5px;">↑</span>
+  										</a>
+										</p>
+									</div>
+								</section>
+
+
+
+								<section id="kernels" style="display: flex; align-items: flex-start; gap: 20px; margin: 80px 0; border-bottom: 1px solid white">
+									<!-- Colonna di sinistra: Foto + Link -->
+									<div style="display: flex; flex-direction: column; align-items: center;">
+										<img src="images/nicolo_meneghetti/foto_NICO.png" alt="Speaker Photo" style="width: 200px; height: auto; border-radius: 8px; object-fit: cover;">
+
+										<!-- Link sotto l'immagine -->
+										<div style="margin-top: 10px; text-align: center;">
+											<p style="margin: 5px 0;">
+												<a href="mailto:nicolo.meneghetti@santannapisa.it">Email the Speaker</a>
+											</p>
+											<p style="margin: 5px 0;">
+												<a href="https://nicolomeneghetti.github.io/" target="_blank">Personal Website</a>
+												<br>
+												<a href="https://scholar.google.com/citations?user=fth1V2cAAAAJ&hl=en" target="_blank">Google Scholar</a>
+											</p>
+										</div>
+									</div>
+
+
+									<!-- Colonna di destra: Testo -->
+									<div>
+										<p style="margin-bottom: 5px; font-size: 28px; font-weight: bold">12:10 - 12:40</p>
+										<h2>From microcircuits to mesoscopic signals: a kernel approach to efficient and interpretable LFP estimation</h2>
+
+										<h3 style="margin-bottom: 4px;font-size: 20px">Dr. Nicolò Meneghetti</h3>
+										<p style="margin-top: 0;">Sant'Anna School of Advanced Studies, Pisa, Italy</p>
+
+										<h3 style="margin-bottom: 4px;">Abstract</h3>
+										<p style="margin-top: 0;">
+											Simulations of large-scale neural activity are increasingly used to explore the biophysical origins of brain signals. However, estimating measurable signals like the local field potential (LFP) often requires detailed multicompartmental models, which can be computationally demanding. In this talk, I will present a kernel-based method that enables efficient and accurate LFP estimation from a biologically realistic large-scale model of mouse primary visual cortex (V1).
+											This method not only reduces computational cost but also improves interpretability by separating the contributions of specific neuronal populations. Applied to the V1 model, it reveals that LFP signals are primarily shaped by external synaptic inputs originating outside the cortex, while local V1 activity plays only a minor role.
+											These findings highlight the kernel method as a robust tool for large-scale simulations, with strong potential for uncovering the circuit mechanisms underlying population signals.
+										</p>
+
+										<p>
+  										<a href="#time-table" style="color: white; text-decoration: none; display: inline-flex; align-items: baseline; gap: 6px;">
+    									<span style="font-size: 18px; position: relative; top: -1.5px;">↑</span>
+    										Back to the Workshop timetable
+											<span style="font-size: 18px; position: relative; top: -1.5px;">↑</span>
+  										</a>
+										</p>
+									</div>
+								</section>
+
+								<section id="connecting_biophysical_models" style="display: flex; align-items: flex-start; gap: 20px; margin: 80px 0; border-bottom: 1px solid white">
+									<!-- Colonna di sinistra: Foto + Link -->
+									<div style="display: flex; flex-direction: column; align-items: center;">
+										<img src="images/Emily Stephen/headshot_2019_square.jpg" alt="Speaker Photo" style="width: 200px; height: auto; border-radius: 8px; object-fit: cover;">
+
+										<!-- Link sotto l'immagine -->
+										<div style="margin-top: 10px; text-align: center;">
+											<p style="margin: 5px 0;">
+												<a href="mailto:estephen@bu.edu">Email the Speaker</a>
+											</p>
+											<p style="margin: 5px 0;">
+												<a href="https://emilystephen.com/" target="_blank">Personal Website</a>
+												<br>
+												<a href="https://scholar.google.com/citations?user=WD7uRPMAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>
+											</p>
+										</div>
+									</div>
+
+
+									<!-- Colonna di destra: Testo -->
+									<div>
+										<p style="margin-bottom: 5px; font-size: 28px; font-weight: bold">14:15 - 14:50	</p>
+										<h2>Connecting biophysical models to empirical power spectra using Filtered Point Processes</h2>
+
+										<h3 style="margin-bottom: 4px;font-size: 20px">Prof. Emily Patricia Stephen</h3>
+										<p style="margin-top: 0;">Boston University (Department of Mathematics and Statistics, Center for Systems Neuroscience, Neurophotonics Center)</p>
+
+										<h3 style="margin-bottom: 4px;">Abstract</h3>
+										<p style="margin-top: 0;">
+											Large-scale neuronal circuit simulations have been very successful in modeling extracellular potentials, but their relationship to empirical data is typically qualitative. A statistical connection to data would be valuable, for example to evaluate goodness-of-fit (“are observed data consistent with a proposed biophysical model?”) or to interpret empirical biomarkers (“when observed dynamics change, what parameters are changing in the underlying system?”). Fitting parameters in biophysical models based on real data is typically an ill-posed problem because of the complexity of the models: many parameter settings would be consistent with a given noisy empirical timeseries. Nevertheless, some kinds of large-scale parameters may have systematic, tractable relationships to observed data. Here we propose a statistical framework based on Filtered Point Processes (FPP) to act as an interface between biophysical models and empirical neural power spectra. We show how the simple statistical framework can be used to facilitate interpretation of rhythmic, broadband, and cross-frequency coupling effects in empirical power spectra, and we show examples of dynamic parameters that can be fit using the framework. Ultimately, we intend for the framework to enable theoreticians to relate their models more closely to empirical data, capturing a broader range of statistical properties than prior methods.
+										</p>
+
+										<p>
+  										<a href="#time-table" style="color: white; text-decoration: none; display: inline-flex; align-items: baseline; gap: 6px;">
+    									<span style="font-size: 18px; position: relative; top: -1.5px;">↑</span>
+    										Back to the Workshop timetable
+											<span style="font-size: 18px; position: relative; top: -1.5px;">↑</span>
+  										</a>
+										</p>
+									</div>
+								</section>
+
+								<section id="aDBS" style="display: flex; align-items: flex-start; gap: 20px; margin: 80px 0; border-bottom: 1px solid white">
+									<!-- Colonna di sinistra: Foto + Link -->
+									<div style="display: flex; flex-direction: column; align-items: center;">
+										<img src="images/Madeleine Lowery/LARGE-Madeleine Lowery-7239.jpg" alt="Speaker Photo" style="width: 200px; height: auto; border-radius: 8px; object-fit: cover;">
+
+										<!-- Link sotto l'immagine -->
+										<div style="margin-top: 10px; text-align: center;">
+											<p style="margin: 5px 0;">
+												<a href="mailto:madeleine.lowery@ucd.ie">Email the Speaker</a>
+											</p>
+											<p style="margin: 5px 0;">
+												<a href="https://people.ucd.ie/madeleine.lowery" target="_blank">Personal Website</a>
+												<br>
+												<a href="https://scholar.google.com/citations?user=-VQrDBgAAAAJ&hl=en" target="_blank">Google Scholar</a>
+											</p>
+										</div>
+									</div>
+
+
+									<!-- Colonna di destra: Testo -->
+									<div>
+										<p style="margin-bottom: 5px; font-size: 28px; font-weight: bold">14:50 - 15:25</p>
+										<h2>Modelling Neural Activity During Adaptive Deep Brain Stimulation for Parkinson’s Disease</h2>
+
+										<h3 style="margin-bottom: 4px;font-size: 20px">Prof. Madeleine M. Lowery</h3>
+										<p style="margin-top: 0;">School of Electrical and Electronic Engineering, University College Dublin</p>
+
+										<h3 style="margin-bottom: 4px;">Abstract</h3>
+										<p style="margin-top: 0;">
+											Deep brain stimulation (DBS) is an established surgical technique for treating the symptoms of Parkinson’s disease involving high frequency stimulation of neurons within the basal ganglia region of the brain.  While very effective at treating motor symptoms including bradykinesia, akinesia and tremor, identification of the optimal stimulation settings for each patient is challenging.  DBS can also result in stimulation-induced side effects due to stimulation of regions outside the target of interest.  To address these limitations, new adaptive DBS methods are currently being investigated to automatically adjust stimulation parameters in real-time in response to changes in patient symptoms or side-effects.  Adaptive or closed-loop stimulation requires the identification of biomarkers that are correlated with symptoms which can be modulated using appropriate control algorithms.   Subthalamic beta band activity is correlated with the symptoms of bradykinesia and rigidity, and suppressed with both medication and DBS.   It has emerged as a potential biomarker for closed-loop DBS, and along with other electrophysiological signatures, is currently being trialed as a biomarker for adaptive DBS in patients.  Identification of the most appropriate control algorithms for adaptive DBS is similarly challenging, particularly as the exact therapeutic mechanisms of DBS and the neural pathways involved are not yet fully understood.   Here we explore how biophysically accurate computational models can be used to develop and test new approaches for adaptive deep brain stimulation, including advanced closed-loop control algorithms.  Models of the electric field surrounding the DBS electrode are coupled to individual neurons within the corticobasal ganglia network.  Using the models, the effect of DBS on individual neural activity and extracellular potentials including local field potentials and electrocortiogram signals can be examined. In this way, computational models can help us understand the effects of electrical stimulation on neural activity at the single cell and system level, linking it to electrophysiological signals which capture population level activity and providing mechanistic insights into the system and its dynamics.   We will show how different closed-loop DBS control algorithms can be implemented and tested in silico as part of the path to clinical translation.
+										</p>
+
+										<p>
+  										<a href="#time-table" style="color: white; text-decoration: none; display: inline-flex; align-items: baseline; gap: 6px;">
+    									<span style="font-size: 18px; position: relative; top: -1.5px;">↑</span>
+    										Back to the Workshop timetable
+											<span style="font-size: 18px; position: relative; top: -1.5px;">↑</span>
+  										</a>
+										</p>
+									</div>
+								</section>
+
+								<section id="VBT" style="display: flex; align-items: flex-start; gap: 20px; margin: 80px 0; border-bottom: 1px solid white">
+									<!-- Colonna di sinistra: Foto + Link -->
+									<div style="display: flex; flex-direction: column; align-items: center;">
+										<img src="images/meysam hashemi/Hashemi_Meysam.png" alt="Speaker Photo" style="width: 200px; height: auto; border-radius: 8px; object-fit: cover;">
+
+										<!-- Link sotto l'immagine -->
+										<div style="margin-top: 10px; text-align: center;">
+											<p style="margin: 5px 0;">
+												<a href="mailto:meysam.HASHEMI@univ-amu.fr">Email the Speaker</a>
+											</p>
+											<br>
+											<p style="margin: 5px 0;">
+												<a href="https://mhashemi0873.github.io/personalwebpage/" target="_blank">Personal Website</a>
+												<br>
+												<a href="https://scholar.google.co.uk/citations?user=Hma4XDMAAAAJ&hl=en" target="_blank">Google Scholar</a>
+											</p>
+										</div>
+									</div>
+
+
+									<!-- Colonna di destra: Testo -->
+									<div>
+										<p style="margin-bottom: 5px; font-size: 28px; font-weight: bold">16:00 - 16:35</p>
+										<h2>Principles and Operation of Virtual Brain Twins</h2>
+
+										<h3 style="margin-bottom: 4px;font-size: 20px">Dr. Meysam Hashemi</h3>
+										<p style="margin-top: 0;">Aix Marseille Université, INSERM, INS, Inst Neurosci Syst, Marseille, France</p>
+
+										<h3 style="margin-bottom: 4px;">Abstract</h3>
+										<p style="margin-top: 0;">
+											Current clinical methods often neglect individual variability by relying on population-wide trials, while mechanism-based approaches remain underutilized in neuroscience due to the brain’s complexity. This situation may change through the use of a Virtual Brain Twin (VBT), which is a personalized digital replica of an individual's brain, integrating structural and functional brain data into advanced computational models and inference algorithms. By bridging the gap between molecular mechanisms, whole-brain dynamics, and imaging data, VBT provides interpretable predictive capabilities, supporting clinicians in personalizing treatments and optimizing interventions.
+											This talk presents the foundational components of VBT development, from anatomical modeling and simulation to Bayesian inference. Applications are illustrated across use cases including resting-state dynamics, healthy aging, multiple sclerosis, epilepsy, Parkinson’s disease, and Alzheimer’s disease.
+										</p>
+
+										<p>
+  										<a href="#time-table" style="color: white; text-decoration: none; display: inline-flex; align-items: baseline; gap: 6px;">
+    									<span style="font-size: 18px; position: relative; top: -1.5px;">↑</span>
+    										Back to the Workshop timetable
+											<span style="font-size: 18px; position: relative; top: -1.5px;">↑</span>
+  										</a>
+										</p>
+									</div>
+								</section>
+
+								<section id="HCN" style="display: flex; align-items: flex-start; gap: 20px; margin: 80px 0; border-bottom: 1px solid white">
+									<!-- Colonna di sinistra: Foto + Link -->
+									<div style="display: flex; flex-direction: column; align-items: center;">
+										<img src="images/Duecker Katharina/profile_pic.jpg" alt="Speaker Photo" style="width: 200px; height: auto; border-radius: 8px; object-fit: cover;">
+
+										<!-- Link sotto l'immagine -->
+										<div style="margin-top: 10px; text-align: center;">
+											<p style="margin: 5px 0;">
+												<a href="mailto:katharina_duecker@brown.edu">Email the Speaker</a>
+											</p>
+											<p style="margin: 5px 0;">
+												<a href="https://sites.brown.edu/stephanie-r-jones-lab/" target="_blank">Lab's Website</a>
+											</p>
+										</div>
+									</div>
+
+
+									<!-- Colonna di destra: Testo -->
+									<div>
+										<p style="margin-bottom: 5px; font-size: 28px; font-weight: bold">16:35 - 17:10</p>
+										<h2>The Human Neocortical Neurosolver as an interactive modeling tool to study the multi-scale mechanisms of human EEG/MEG signals</h2>
+
+										<h3 style="margin-bottom: 4px;font-size: 20px">Dr. Katharina Duecker</h3>
+										<p style="margin-top: 0;">Department of Neuroscience, Carney Institute for Brain Science, Brown University, RI, USA</p>
+
+										<h3 style="margin-bottom: 4px;">Abstract</h3>
+										<p style="margin-top: 0;">
+											The Human Neocortical Neurosolver (HNN) is a user-friendly software tool developed to make biophysical modeling of the multiscale neural origin of Electroencephalography (EEG) and Magnetoencephalography (MEG) signals accessible to a broad audience. Specifically, HNN is designed with a graphical user interface (GUI) and workflows for the development and testing of hypotheses on the neural dynamics underlying E-/MEG measured brain oscillations and event-related potentials (ERPs). Similar functionality and tutorials can also be accessed through a Python-based API. The foundation of HNN is a laminated neocortical column model activated by layer specific synaptic input from exogenous sources, including thalamus and higher order cortex. The model contains excitatory pyramidal neurons and inhibitory neurons in supragranular and infragranular layers, and primary current sources underlying E/MEG signals are calculated from the pyramidal neuron dendrites enabling one to one comparison to source localized signals. HNN’s model is explicitly designed with an  intermediate level of biophysical detail that allows relatively computationally inexpensive simulations that can be run locally on a CPU.
+											In this talk, I will provide an overview of the software and guidance on getting started with simulations of ERPs and brain rhythms. Furthermore, I will present a model update that faithfully captures pyramidal neuron dendritic calcium dynamics based on the biophysics of human cells. I will demonstrate that intracellular calcium is associated with large currents towards the cell body that have a dominating  effect on the amplitude of E/MEG recordings.
+										</p>
+
+										<p>
+  										<a href="#time-table" style="color: white; text-decoration: none; display: inline-flex; align-items: baseline; gap: 6px;">
+    									<span style="font-size: 18px; position: relative; top: -1.5px;">↑</span>
+    										Back to the Workshop timetable
+											<span style="font-size: 18px; position: relative; top: -1.5px;">↑</span>
+  										</a>
+										</p>
+									</div>
+								</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+								<div>
+									<h1>The Organizers</h1>
+								</div>
+
+
+
+								<!-- BOTTOM SECTION -->
+								<div style="display: flex; justify-content: space-between; margin-top: 40px;">
+								  <!-- LEFT BOX -->
+								  <div style="width: 48%; border: 1px solid #ccc; padding: 16px; border-radius: 8px; display: flex; align-items: center;">
+
+										<div style="flex-shrink: 0;">
+											<img src="images/nicolo_meneghetti/Foto_NICO.png" alt="" style="width: 200px; height: auto; border-radius: 8px;">
+										</div>
+										<!-- Text on the right -->
+										<div style="line-height: 1.4; margin: 0;">
+											<h3 style="margin-bottom: 4px;font-size: 16px">Dr. Nicolò Meneghetti</h3>
+											<p style="margin-bottom: 2px;"><b>Sant'Anna School of Advanced Studies, Pisa, Italy </b></p>
+											<p style="margin-bottom: 2px;">PostDoc at the Computational Neuroengineering Lab. </p>
+											<br>
+											<p style="margin-bottom: 2px;"><b>Publications:</b> <a href="https://scholar.google.com/citations?user=fth1V2cAAAAJ&hl=en" target="_blank">Google Scholar</a></p>
+											<p style="margin-top: 2px;"><b>Website:</b> <a href="https://nicolomeneghetti.github.io/">Link</a></p>
+								    </div>
+								  </div>
+
+								  <!-- RIGHT BOX -->
+								  <div style="width: 48%; border: 1px solid #ccc; padding: 16px; border-radius: 8px; display: flex; align-items: center;">
+										<div style="flex-shrink: 0;">
+											<img src="images/eleonora russo/Eleonora-Russo-2024.jpg" alt="" style="width: 200px; height: auto; border-radius: 8px;">
+										</div>
+										<!-- Text on the right -->
+										<div style="line-height: 1.4; margin: 0;">
+											<h3 style="margin-bottom: 4px;font-size: 16px">Dr. Eleonora Russo</h3>
+											<p style="margin-bottom: 2px;"><b>Sant'Anna School of Advanced Studies, Pisa, Italy </b></p>
+											<p style="margin-bottom: 2px;">PI of the Brain Dynamics Laboratory</p>
+											<br>
+											<p style="margin-bottom: 2px;"><b>Publications:</b> <a href="https://scholar.google.com/citations?user=BGePCZgAAAAJ&hl=en" target="_blank">Google Scholar</a></p>
+											<p style="margin-top: 2px;"><b>Website:</b> <a href="https://www.santannapisa.it/en/eleonora-russo">Link</a></p>
+										</div>
+								  </div>
+								</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							</div>
+						</div>
+						<!-- This is the navigation menu -->
+						<nav>
+							<!-- This element makes an "Unordered List" -->
+							<ul>
+								<!-- This is a "List Item" -->
+								<li>
+									<a href="#research">CNS 2025 Links</a>
+								</li>
+								<li>
+									<a href="#community">Contact us</a>
+								</li>
+								<!-- <li>
+									<a href="#contact">Contacts</a>
+								</li> -->
+								<!-- 	You can add another button to your navigation menu by adding
+									another List Item with a link inside of it.
+								-->
+								<!-- <li>
+									<a href="images/Astronomy.jpg">My CV</a>
+								</li> -->
+							</ul>
+						</nav>
+					</header>
+
+					<!-- These are the "cards" that appear when you click the buttons on the main page -->
+					<div id="main">
+						<!-- 	Here is the "About Me" card. Note it has the id "about", which the previous
+							button links to.
+						-->
+
+						<!-- Here is the "Research" card. -->
+						<article id="research">
+							<h2 class="major">CNS Links:</h2>
+							<span class="image main">
+								<img src="images/CNS_2025-banner.jpg" alt=""/>
+							</span>
+							<p>
+								<b>Link to the Conference Program: </b><br> <a href="https://www.cnsorg.org/cns-2025-meeting-program">CNS Program</a>
+							</p>
+							<p>
+								<b>Link to the Workshop Sched page: </b><br> <a href="https://www.cnsorg.org/cns-2025-meeting-program">Sched</a>
+							</p>
+						</article>
+
+						<!-- Here is the "Community" card. -->
+						<article id="community">
+							<h2 class="major">Contact us</h2>
+							<p>
+								Please feel free to reach out to the organizers for any questions: <a href="mailto:nicolo.meneghetti@santannapisa.it?cc=eleonora.russo@santannapisa.it">Email the Organizers</a>
+							</p>
+						</article>
+
+						<!-- Here is a the "Contact" card. -->
+						<article id="contact">
+							<h2 class="major">Contact</h2>
+							<p>
+								<b>Email:</b>
+							</p>
+							<p>
+								<b>Address:</b>
+							</p>
+
+							<!-- 	Here are the fancy icons that link to your social media.
+								These icons are rendered using Font Awesome fonts, and you can find more icons
+								here: https://fontawesome.com/icons
+							-->
+							<ul class="icons">
+								<!-- The Twitter icon -->
+								<li>
+									<!-- 	Note that you need to change the link to point to your page.
+										Replace "#" with your Twitter profile page.
+									-->
+									<a href="#" class="icon fa-twitter">
+										<span class="label">Twitter</span>
+									</a>
+								</li>
+								<!-- The Facebook icon -->
+								<li>
+									<a href="#" class="icon fa-facebook">
+										<span class="label">Facebook</span>
+									</a>
+								</li>
+								<!-- The Instagram icon -->
+								<li>
+									<a href="#" class="icon fa-instagram">
+										<span class="label">Instagram</span>
+									</a>
+								</li>
+								<!-- The GitHub icon -->
+								<li>
+									<a href="#" class="icon fa-github">
+										<span class="label">GitHub</span>
+									</a>
+								</li>
+								<!-- 	We can add a new icon by searching on the Font Awesome website
+									for the correct class name and inserting it as a new list item.
+
+									We found "envelope" here: https://fontawesome.com/icons/envelope
+								-->
+								<!-- <li>
+									<a href="#" class="icon fa-envelope">
+										<span class="label">Email</span>
+									</a>
+								</li> -->
+							</ul>
+						</article>
+					</div>
+
+					<!-- This is the footer that appears at the bottom of the page -->
+					<footer id="footer">
+						<!-- 	You can change "Untitled" to your name to show everyone that
+							this is your work.
+						-->
+						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+			<!--	This is the background image of the site.
+				All configuration of the background is done with CSS.
+				Look in the file assets/css/main.css and search for "#bg" to
+				see how this element is styled. Look for comments pointing
+				to where you can set a new background image.
+			-->
+			<div id="bg"></div>
+
+			<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
